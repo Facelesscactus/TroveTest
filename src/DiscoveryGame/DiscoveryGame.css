@@ -1,16 +1,54 @@
 .trove__mp_img{
-    height: 200px;
-    width: 400px;
+    height: 600px;
+    width: 600px;
+    position: absolute;
+    
+    
     
 }
 
 .Swipe-right{
-    height: 200px;
+    height: 600px;
     float: right;
     width: 100px;
+    opacity: 0.33;
+    background-color: green;
+    color: black;
+    position: static;
+    
+    
+    
+    
 }
 .Swipe-Left{
-    height: 200px;
+    height: 600px;
     width: 100px;
     float: left;
+    opacity: 0.33;
+    background-color: red;
+    color: black;
+    position: static;
+    
+    
+}
+.SongName{
+    height: 100;
+    color: black;
+    background-color: purple;
+    width: 100%;
+    text-align: center;
+    
+    
+}
+.SongDuration{
+    height: 150;
+    color: black;
+    background-color: red;
+    
+    width: 600;
+    
+    
+    text-align: center;
+    
+
 }
