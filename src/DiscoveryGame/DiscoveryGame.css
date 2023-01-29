@@ -1,4 +1,16 @@
 .trove__mp_img{
-    width: 200px;
-    padding-left: 200px;
+    height: 200px;
+    width: 400px;
+    
+}
+
+.Swipe-right{
+    height: 200px;
+    float: right;
+    width: 100px;
+}
+.Swipe-Left{
+    height: 200px;
+    width: 100px;
+    float: left;
 }

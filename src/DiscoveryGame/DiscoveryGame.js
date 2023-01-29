@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom';
 import ReactSwipe from 'react-swipe';
 import scope from '../imgs/ScaryJerma.png'
 import MrElbertson from '../imgs/jerma-burger.gif'
+import Jermy from '../imgs/jerma.gif'
  
 /*
 const styles = {
@@ -38,15 +39,26 @@ const DiscoveryGame = () => {
         swipeOptions={{ continuous: false }}
         ref={el => (reactSwipeEl = el)}
       >
-        <img src={scope} className='trove__mp_img'/>
-        <img src={MrElbertson} className='trove__mp_img'/>
-        <div>no more world</div>
-        <div>Goodbye world</div>
-        <div>Hello World</div>
+        <div>
+          <button onClick={() => reactSwipeEl.next()} className='Swipe-right'>Next</button>
+          <img src={scope} className='trove__mp_img'/>
+          <button onClick={() => reactSwipeEl.prev()} className='Swipe-Left'>Previous</button>
+        </div>
+        <div>
+          <button onClick={() => reactSwipeEl.next()} className='Swipe-right'>Next</button>
+          <img src={MrElbertson} className='trove__mp_img'/>
+          <button onClick={() => reactSwipeEl.prev()} className='Swipe-Left'>Previous</button>
+        </div>
+        <div>
+          <button onClick={() => reactSwipeEl.next()} className='Swipe-right'>Next</button>
+          <img src={Jermy} className='trove__mp_img'/>
+          <button onClick={() => reactSwipeEl.prev()} className='Swipe-Left'>Previous</button>
+        </div>
+        
+        
 
+        
       </ReactSwipe>
-      <button onClick={() => reactSwipeEl.next()}>Next</button>
-      <button onClick={() => reactSwipeEl.prev()}>Previous</button>
     </div>
   );
 };
