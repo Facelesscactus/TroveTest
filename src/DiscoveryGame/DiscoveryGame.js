@@ -12,7 +12,7 @@ const DiscoveryGame = () => {
   let reactSwipeEl;
  
   return (
-    <div>
+    <div className='container'>
       <ReactSwipe
         className="DiscoveryGame"
         swipeOptions={{ continuous: false }}
