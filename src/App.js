@@ -7,7 +7,7 @@ import NotFound from './NotFound';
 import Login from './Login';
 import CreateAcc from './CreateAcc';
 import DiscoveryGame from './DiscoveryGame/DiscoveryGame';
-import MyComponent from './MyComponent';
+
 
 
 
