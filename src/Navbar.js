@@ -11,7 +11,7 @@ const Navbar = () => {
                 <Link to="/DiscoveryGame">DiscoveryGame</Link>
                 <Link to="/CreateAccount">Create Account</Link>
                 <Link to="/login">Login</Link>
-                <Link to="/component">tester</Link>
+                
                 
 
                 

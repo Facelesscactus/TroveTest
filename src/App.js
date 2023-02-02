@@ -30,9 +30,7 @@ function App() {
             <Route path="/DiscoveryGame">
               <DiscoveryGame />
             </Route>
-            <Route path="/component">
-              <MyComponent />
-            </Route>
+            
             <Route path="/CreateAccount">
               <CreateAcc />
             </Route>
