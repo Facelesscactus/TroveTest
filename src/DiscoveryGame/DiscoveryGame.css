@@ -1,5 +1,8 @@
-.container{
 
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 600px;
 }
 
@@ -9,7 +12,7 @@
     height: 600px;
     width: 600px;
     position: absolute;
-    
+    pointer-events: none;
     
     
 }
@@ -21,7 +24,7 @@
     opacity: 0.33;
     background-color: green;
     color: black;
-    position: static;
+    
     
     
     
@@ -34,7 +37,7 @@
     opacity: 0.33;
     background-color: red;
     color: black;
-    position: static;
+    
     
     
 }
@@ -55,7 +58,11 @@
     width: 600;
     
     
-    text-align: center;
+    bottom: 0px;
     
 
 }
+
+
+
+
