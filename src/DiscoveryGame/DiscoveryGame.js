@@ -12,7 +12,7 @@ import SwipeableViews from 'react-swipeable-views';
 
 const DiscoveryGame= () =>{
   const [index, setIndex] = React.useState(0);
-  const numOfSlides = 2;
+  const numOfSlides = 3;
 
   const handleChangeIndex = (newIndex) => {
     if (newIndex >= numOfSlides) {
