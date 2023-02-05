@@ -14,6 +14,9 @@ import { useSwipeable } from 'react-swipeable';
 
 const DiscoveryGame= () =>{
   const [index, setIndex] = React.useState(0);
+  const [accept, setaccept] = React.useState(0);
+  const [deny, setdeny] = React.useState(0);
+  
   const slides = [
     {
       url: require('../imgs/jerma.gif'),
@@ -39,22 +42,28 @@ const DiscoveryGame= () =>{
 
   const swipeableProps = useSwipeable({
     trackMouse: true,
-    onSwipedLeft: () => setIndex(prevIndex => (prevIndex + 1) % slides.length),
-    onSwipedRight: () => setIndex(prevIndex => (prevIndex + 1) % slides.length),
+    onSwipedLeft: () => {setIndex(prevIndex => (prevIndex + 1) % slides.length);
+    setaccept(accept + 1)},
+    onSwipedRight: () => {setIndex(prevIndex => (prevIndex + 1) % slides.length);
+    setdeny(deny + 1)},
   });
   
   return (
-    <div className='container' {...swipeableProps}>
-      <h2 className="SongName">{slides[index].header}</h2>
-      <img src={slides[index].url} alt={slides[index].alt} className="trove__mp_img"/>
-      <ReactAudioPlayer src={slides[index].audio} className="SongDuration" autoPlay controls/>
-      <button onClick={() => setIndex(prevIndex => (prevIndex + 1) % slides.length)} className='Swipe-Left'>Previous</button>
-      <button onClick={() => setIndex(prevIndex => (prevIndex + 1) % slides.length)} className='Swipe-right'>Next</button>
-      
+    <div className="div">
+      <div className='container' {...swipeableProps}>
+        <h2 className="SongName">{slides[index].header}</h2>
+        <img src={slides[index].url} alt={slides[index].alt} className="trove__mp_img"/>
+        <ReactAudioPlayer src={slides[index].audio} className="SongDuration" autoPlay controls/>
+        <button onClick={() => {setIndex(prevIndex => (prevIndex + 1) % slides.length);setdeny(deny + 1)}} className='Swipe-Left'>Previous</button>
+        <button onClick={() => {setIndex(prevIndex => (prevIndex + 1) % slides.length);setaccept(accept + 1)}} className='Swipe-right'>Next</button>
+        
+      </div>
+      <div className="show-number">{accept}jeff</div>
+      <div className="show-number">{deny}dennim</div>
     </div>
   );
 };
- 
+
 
 export default DiscoveryGame;
 
