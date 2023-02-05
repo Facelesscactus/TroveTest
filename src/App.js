@@ -7,6 +7,7 @@ import NotFound from './NotFound';
 import Login from './Login';
 import CreateAcc from './CreateAcc';
 import DiscoveryGame from './DiscoveryGame/DiscoveryGame';
+import Swiper from './Tester/Tester';
 
 
 
@@ -29,6 +30,9 @@ function App() {
             </Route>
             <Route path="/DiscoveryGame">
               <DiscoveryGame />
+            </Route>
+            <Route path="/Tester">
+              <Swiper />
             </Route>
             
             <Route path="/CreateAccount">
