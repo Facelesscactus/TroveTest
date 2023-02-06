@@ -3,11 +3,6 @@
 import ReactAudioPlayer from 'react-audio-player';
 import './DiscoveryGame.css'
 import React from 'react';
-import scope from '../imgs/ScaryJerma.png'
-import MrElbertson from '../imgs/jerma-burger.gif'
-import Jermy from '../imgs/jerma.gif'
-import MeepMerp from '../mp3/MeepMerp.mp3'
-import OTheJermy from '../mp3/Jerma_misery.mp3'
 import { useSwipeable } from 'react-swipeable';
  
 
@@ -19,22 +14,22 @@ const DiscoveryGame= () =>{
   
   const slides = [
     {
-      url: require('../imgs/jerma.gif'),
+      url: require('../imgs/Reflection.jpg'),
       alt: 'Image 1',
-      header: 'Slide 1',
-      audio: require('../mp3/MeepMerp.mp3'),
+      header: 'Reflection',
+      audio: require('../mp3/Reflection.mp3'),
     },
     {
-      url: require('../imgs/jerma-burger.gif'),
+      url: require('../imgs/Resurrections.jpg'),
       alt: 'Image 2',
-      header: 'Slide 2',
-      audio: require('../mp3/Jerma_misery.mp3'),
+      header: 'Resurrections',
+      audio: require('../mp3/Resurrections.mp3'),
     },
     {
-      url: require('../imgs/ScaryJerma.png'),
+      url: require('../imgs/Farewell.jpg'),
       alt: 'Image 3',
-      header: 'Slide 3',
-      audio: require('../mp3/MeepMerp.mp3'),
+      header: 'Farewell',
+      audio: require('../mp3/Farewell.mp3'),
     },
   ];
 
