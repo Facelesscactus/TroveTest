@@ -60,6 +60,13 @@
 
 
 */
+@rhap_theme-color: #868686 !default;
+@rhap_background-color: #fff !default;
+@rhap_bar-color: #dddddd !default;
+@rhap_time-color: #333 !default;
+@rhap_font-family: inherit !default;
+
+
 
 .trove__mp_img{
     height: 600px;
@@ -81,12 +88,12 @@
     
 }
 .Swipe-right{
-    right: 0;
+    float:right;
     background-color: green;
     
 }
 .Swipe-Left{
-    left: 0;
+    float:left;
     background-color: red;
     
 }
@@ -99,11 +106,11 @@
 
 
 .SongName{
-  color: black;
+  color: darkcyan;
   width: 100%;
   bottom: 0;
-  position: absolute;
-  bottom: 0;
+  background-color: darkblue;
+  top: 0;
   left: 0;
   right: 0;
   text-align: center;
@@ -113,20 +120,15 @@
 .SongDuration{
     height: 150;
     color: black;
-    background-color: red;
+    background-color: lightgray;
     
-    width: 600;
-    
-    
-    bottom: 0px;
-    
-
+    width: 100%;
 }
 
 
 .show-number{
   text-align: center;
-  right: 0;
+  float:right;
 
 }
 

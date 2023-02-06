@@ -34,7 +34,7 @@ const DiscoveryGame = () => {
     {
       url: require('../imgs/Farewell.jpg'),
       alt: 'Image 3',
-      header: 'got through the Discover Game',
+      header: 'Discovery Game Song List Done',
       audio: require('../mp3/Farewell.mp3'),
     },
   ];
@@ -56,24 +56,32 @@ const DiscoveryGame = () => {
   return (
     <div className="div">
       <div className='container' {...swipeableProps}>
-      <h2 className="SongName">{slides[index].header}</h2>
-        <img src={slides[index].url} alt={slides[index].alt} className="trove__mp_img"/>
+        
+        
+        <h2 className="SongName">{slides[index].header}</h2>
+
+
+        <div className="Redux">
+          <img src={slides[index].url} alt={slides[index].alt} className="trove__mp_img"/>
+          
+
+          <button onClick={() => {if (index === slides.length - 1) return;
+          setIndex((prevIndex) => (prevIndex + 1) % slides.length);
+          setDeny(deny + 1);
+          }} className='Swipe-Left'>Previous</button>
+
+
+          <button onClick={() => {if (index === slides.length - 1) return;
+          setIndex((prevIndex) => (prevIndex + 1) % slides.length);
+          setAccept(accept + 1);
+          }} className='Swipe-right'>Next</button>
+        
+        </div>
+
         <ReactAudioPlayer src={slides[index].audio} className="SongDuration" autoPlay controls/>
-        
-        
-        <button onClick={() => {if (index === slides.length - 1) return;
-        setIndex((prevIndex) => (prevIndex + 1) % slides.length);
-        setDeny(deny + 1);
-        }} className='Swipe-Left'>Previous</button>
-
-
-        <button onClick={() => {if (index === slides.length - 1) return;
-        setIndex((prevIndex) => (prevIndex + 1) % slides.length);
-        setAccept(accept + 1);
-        }} className='Swipe-right'>Next</button>
-        
       </div>
       <div className="show-number">{accept}jeff</div>
+      <br/>
       <div className="show-number">{deny}dennim</div>
     </div>
   );
