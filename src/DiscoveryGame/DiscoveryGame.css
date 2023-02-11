@@ -87,12 +87,12 @@
     
     
 }
-.Swipe-right{
+.Swipe-Left{
     float:right;
     background-color: green;
     
 }
-.Swipe-Left{
+.Swipe-right{
     float:left;
     background-color: red;
     

@@ -4,6 +4,8 @@ import ReactAudioPlayer from 'react-audio-player';
 import './DiscoveryGame.css'
 import React from 'react';
 import { useSwipeable } from 'react-swipeable';
+
+import ReactPlayer from 'react-player'
  
 
 
@@ -11,31 +13,35 @@ const DiscoveryGame = () => {
   const [index, setIndex] = React.useState(0);
   const [accept, setAccept] = React.useState(0);
   const [deny, setDeny] = React.useState(0);
-
+   
   const slides = [
     {
       url: require('../imgs/Reflection.jpg'),
       alt: 'Image 1',
       header: 'Reflection',
       audio: require('../mp3/Reflection.mp3'),
+      startTime: ('59'),
     },
     {
       url: require('../imgs/Resurrections.jpg'),
       alt: 'Image 2',
       header: 'Resurrections',
       audio: require('../mp3/Resurrections.mp3'),
+      startTime: ('20'),
     },
     {
       url: require('../imgs/Farewell.jpg'),
       alt: 'Image 3',
       header: 'Farewell',
       audio: require('../mp3/Farewell.mp3'),
+      startTime: ('45'),
     },
     {
       url: require('../imgs/Farewell.jpg'),
       alt: 'Image 3',
       header: 'Discovery Game Song List Done',
       audio: require('../mp3/Farewell.mp3'),
+      startTime: ('30'),
     },
   ];
 
@@ -68,25 +74,30 @@ const DiscoveryGame = () => {
           <button onClick={() => {if (index === slides.length - 1) return;
           setIndex((prevIndex) => (prevIndex + 1) % slides.length);
           setDeny(deny + 1);
-          }} className='Swipe-Left'>Previous</button>
+          }} className='Swipe-right'>Swipe right</button>
 
 
           <button onClick={() => {if (index === slides.length - 1) return;
           setIndex((prevIndex) => (prevIndex + 1) % slides.length);
           setAccept(accept + 1);
-          }} className='Swipe-right'>Next</button>
+          }} className='Swipe-Left'>Swipe left</button>
         
         </div>
-
-        <ReactAudioPlayer src={slides[index].audio} className="SongDuration" autoPlay controls/>
+        
+        <ReactAudioPlayer src={slides[index].audio} className="SongDuration" autoPlay controls defaultCurrentTime={slides[index].startTime}/>
+        <button onClick={() => {
+        if (index === 0) return;
+        setIndex((prevIndex) => (prevIndex + slides.length - 1) % slides.length);
+        }}>Previous</button>
+      
       </div>
-      <div className="show-number">{accept}jeff</div>
+      <div className="show-number">{accept}Left swipes </div>
       <br/>
-      <div className="show-number">{deny}dennim</div>
+      <div className="show-number">{deny}Right swipes</div>
     </div>
   );
 };
-
-
+// <ReactPlayer url={slides[index].audio} className="SongDuration" playing={true} controls startTime={slides[index].startTime}/>
+//setDeny(deny + 1); for the previous button
 export default DiscoveryGame;
 
