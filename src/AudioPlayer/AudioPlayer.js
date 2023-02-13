@@ -33,16 +33,16 @@ const AudioPlayer = () => {
 
             {/*current time*/}
 
-            <div>0:00</div>
+            <div className='currentTime'>0:00</div>
 
             {/*progress bar*/}
             <div>
-                <input type="range" />
+                <input type="range" className='progressBar'/>
             </div>
 
 
             {/*Duration*/}
-            <div>2:49</div>
+            <div className='duration'>2:49</div>
 
         </div>
     );
