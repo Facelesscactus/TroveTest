@@ -9,8 +9,14 @@ import {FaPause} from 'react-icons/fa';
 
 
 const AudioPlayer = () => {
+    //state
 
-    const [isPlaying, setIsPlaying] =  useState(true);
+    const [isPlaying, setIsPlaying] =  useState(false);
+
+    //reference
+    const audioPlayer = useRef(); //reference to the audio player
+
+    
 
     const togglePlayPause = () => {
 
