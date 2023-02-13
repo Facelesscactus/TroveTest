@@ -1,6 +1,6 @@
-import React, {useState} from 'react';
+import React, {useState, useRef} from 'react';
 
-import Farewell from '../mp3/Farewell.mp3'
+import Reflection from '../mp3/Reflection.mp3'
 import './AudioPlayer.css'
 import {GoArrowLeft} from 'react-icons/go';
 import {GoArrowRight} from 'react-icons/go';
@@ -9,18 +9,39 @@ import {FaPause} from 'react-icons/fa';
 
 
 const AudioPlayer = () => {
+    //state
 
-    const [isPlaying, setIsPlaying] =  useState(true);
+    const [isPlaying, setIsPlaying] =  useState(false);
+
+    //reference
+    const audioPlayer = useRef(); //reference to the audio player
+
+    
 
     const togglePlayPause = () => {
+
+        const preValue = isPlaying;
+
+
         
-        setIsPlaying(!isPlaying);
+        
+        setIsPlaying(!preValue);
+        
+        if(isPlaying){
+            audioPlayer.current.play();
+            
+        
+        }else {
+            audioPlayer.current.pause();
+
+        }
+
 
     }
 
     return (  
         <div className="audioPlayer">
-            <audio src ='../mp3/Farewell.mp3'></audio>
+            <audio ref={audioPlayer} src ={Reflection}></audio>
             
             <button className='forwardBackward'><GoArrowLeft/> 30</button>
             
