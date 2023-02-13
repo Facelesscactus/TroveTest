@@ -4,8 +4,9 @@ import ReactAudioPlayer from 'react-audio-player';
 import './DiscoveryGame.css'
 import React from 'react';
 import { useSwipeable } from 'react-swipeable';
+import AudioPlayer from '../AudioPlayer/AudioPlayer';
 
-import ReactPlayer from 'react-player'
+
  
 
 
@@ -97,7 +98,11 @@ const DiscoveryGame = () => {
     </div>
   );
 };
-// <ReactPlayer url={slides[index].audio} className="SongDuration" playing={true} controls startTime={slides[index].startTime}/>
+
+//<AudioPlayer className="SongDuration"/> soon to replace ReactAudioPlayer
+
+
+
 //setDeny(deny + 1); for the previous button
 export default DiscoveryGame;
 

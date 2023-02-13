@@ -60,11 +60,7 @@
 
 
 */
-@rhap_theme-color: #868686 !default;
-@rhap_background-color: #fff !default;
-@rhap_bar-color: #dddddd !default;
-@rhap_time-color: #333 !default;
-@rhap_font-family: inherit !default;
+
 
 
 
@@ -102,6 +98,7 @@
     position:absolute;
     justify-content: center;
     width: 600px;
+    
 }
 
 
